@@ -6,7 +6,18 @@ Set içerisinde hem **baskıya hazır A4 materyaller (PDF ve etkileşimli HTML)*
 
 ---
 
-## 🚀 Hızlı Başlangıç
+## 🌐 Canlı İnternet Bağlantısı (Her Yerden Erişin)
+
+Bu proje internete yüklendi! Yiğit Alp telefonundan, tabletinden veya istediğiniz herhangi bir bilgisayardan tek tıkla ulaşabilir:
+
+👉 **[https://biteker.github.io/yigit-alp-ritmik-sayma/](https://biteker.github.io/yigit-alp-ritmik-sayma/)**
+
+- **Doğrudan Oyun:** [https://biteker.github.io/yigit-alp-ritmik-sayma/oyun/index.html](https://biteker.github.io/yigit-alp-ritmik-sayma/oyun/index.html)
+- **Çalışma Kağıtları:** [https://biteker.github.io/yigit-alp-ritmik-sayma/basili_materyaller/tum_materyaller_rehberi.html](https://biteker.github.io/yigit-alp-ritmik-sayma/basili_materyaller/tum_materyaller_rehberi.html)
+
+---
+
+## 🚀 Yerel Olarak Başlatmak İçin (İnternetsiz)
 
 ### 1. Etkileşimli Oyunu Başlatmak İçin:
 Terminalden tek komutla veya dosyaya tıklayarak başlatabilirsiniz:
