@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - 7'şer Ritmik Sayma Çalışma Kağıdı</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    :root {
+      --theme: #0284c7;
+      --theme-light: #f0f9ff;
+      --theme-border: #7dd3fc;
+    }
+    .theme-header { border-bottom: 3px dashed var(--theme-border); }
+    .theme-badge { background: var(--theme); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 800; }
+    
+    /* Pearls track */
+    .pearl-track {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 4px 0;
+    }
+    .pearl-item {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      border: 1.5px solid #0284c7;
+    }
+    .pearl-filled {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    .pearl-blank {
+      background: white;
+      border-style: dashed;
+      color: #0284c7;
+    }
+    body.show-answers .pearl-blank::after {
+      content: attr(data-answer);
+      color: #15803d;
+      font-weight: 900;
+    }
+
+    /* Calendar Grid */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 4px 0;
+    }
+    .calendar-card {
+      background: #f0f9ff;
+      border: 1.5px solid #bae6fd;
+      border-radius: 6px;
+      padding: 5px;
+      text-align: center;
+      font-size: 0.78rem;
+    }
+    .calendar-card strong {
+      display: block;
+      color: #0369a1;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    /* Maze Grid */
+    .sea-maze {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      margin: 4px 0;
+    }
+    .sea-cell {
+      padding: 4px 2px;
+      text-align: center;
+      border: 1.5px solid #bae6fd;
+      background: #f0f9ff;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: #0369a1;
+    }
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #0369a1;
+    }
+    .sea-cell.correct {
+      border-color: #0284c7;
+      background: #bae6fd;
+    }
+    body.show-answers .sea-cell.correct {
+      background: #38bdf8 !important;
+      color: #0f172a !important;
+      font-weight: 900;
+    }
+
+    /* Match Grid */
+    .steps-matching {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .match-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .circle-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid #0284c7;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🌊 7'şer Ritmik Sayma Macera Sayfası</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="document.body.classList.toggle('show-answers')" class="btn btn-answer">💡 Cevapları Göster/Gizle</button>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Header -->
+      <div class="sheet-header theme-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🌊</span>
+            <div>
+              <h1 class="sheet-title" style="color: #0284c7;">7'şer Ritmik Sayma Çalışma Kağıdı</h1>
+              <p class="sheet-subtitle">Yiğit Alp ile Okyanus Keşfi • 3. Sınıf Ritmik Sayma & Çarpma</p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-badge">7'ŞER DERİN DENİZ GÖREVİ</span>
+          </div>
+        </div>
+        <div class="student-info-bar">
+          <div class="info-item"><span>Adı Soyadı:</span> <span class="info-line"><strong>Yiğit Alp</strong></span></div>
+          <div class="info-item"><span>Tarih:</span> <span class="info-line"></span></div>
+          <div class="info-item"><span>Puan:</span> <span class="rating-stars">☆☆☆☆☆</span></div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 1: Denizaltının İncileri -->
+      <div class="activity-card" style="border-color: #7dd3fc;">
+        <div class="activity-title" style="color: #0369a1;">
+          <span>🦪</span> 1. ETKİNLİK: Denizaltının Sihirli İncileri (Eksik Sayıları Yaz)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Denizaltının oksijen tüplerini doldurmak için 7'şer ileriye doğru sayarak boş incileri tamamla:
+        </p>
+        <div class="pearl-track">
+          <div class="pearl-item pearl-filled">7</div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-blank" data-answer="14"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-filled">21</div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-blank" data-answer="28"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-filled">35</div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-blank" data-answer="42"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-filled">49</div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-blank" data-answer="56"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-filled">63</div>
+          <span style="font-size:1.2rem; align-self:center; color:#0284c7;">➔</span>
+          <div class="pearl-item pearl-blank" data-answer="70"></div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 2: Takvim ve Gün Dedektifi -->
+      <div class="activity-card" style="border-color: #7dd3fc;">
+        <div class="activity-title" style="color: #0369a1;">
+          <span>📅</span> 2. ETKİNLİK: Takvim Ustası (1 Hafta = 7 Gün)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Her hafta 7 gün olduğuna göre 7'şer sayarak haftalık gün sayılarını hesapla:
+        </p>
+        <div class="calendar-grid">
+          <div class="calendar-card">
+            3 Hafta kaç gün?<br>
+            <strong>3 × 7 = <span class="answer-key-text">21</span><span style="color:#0284c7;">[ &nbsp; ]</span> gün</strong>
+          </div>
+          <div class="calendar-card">
+            5 Hafta kaç gün?<br>
+            <strong>5 × 7 = <span class="answer-key-text">35</span><span style="color:#0284c7;">[ &nbsp; ]</span> gün</strong>
+          </div>
+          <div class="calendar-card">
+            8 Hafta kaç gün?<br>
+            <strong>8 × 7 = <span class="answer-key-text">56</span><span style="color:#0284c7;">[ &nbsp; ]</span> gün</strong>
+          </div>
+          <div class="calendar-card">
+            10 Hafta kaç gün?<br>
+            <strong>10 × 7 = <span class="answer-key-text">70</span><span style="color:#0284c7;">[ &nbsp; ]</span> gün</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 3: Okyanus Labirenti -->
+      <div class="activity-card" style="border-color: #7dd3fc;">
+        <div class="activity-title" style="color: #0369a1;">
+          <span>🧭</span> 3. ETKİNLİK: Batık Hazine Haritası (7'nin Katlarını Boya)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Sadece <strong>7'şer ritmik sayma</strong> sayılarını boyayarak balığı hazine sandığına ulaştır:
+        </p>
+        <div class="sea-maze">
+          <div class="sea-cell correct">7 🐠</div>
+          <div class="sea-cell correct">14</div>
+          <div class="sea-cell correct">21</div>
+          <div class="sea-cell">25</div>
+          <div class="sea-cell">32</div>
+          <div class="sea-cell">44</div>
+
+          <div class="sea-cell">11</div>
+          <div class="sea-cell">18</div>
+          <div class="sea-cell correct">28</div>
+          <div class="sea-cell correct">35</div>
+          <div class="sea-cell">39</div>
+          <div class="sea-cell">52</div>
+
+          <div class="sea-cell">16</div>
+          <div class="sea-cell">24</div>
+          <div class="sea-cell">30</div>
+          <div class="sea-cell correct">42</div>
+          <div class="sea-cell correct">49</div>
+          <div class="sea-cell">58</div>
+
+          <div class="sea-cell">20</div>
+          <div class="sea-cell">29</div>
+          <div class="sea-cell">38</div>
+          <div class="sea-cell">45</div>
+          <div class="sea-cell correct">56</div>
+          <div class="sea-cell">61</div>
+
+          <div class="sea-cell">26</div>
+          <div class="sea-cell">33</div>
+          <div class="sea-cell">48</div>
+          <div class="sea-cell">55</div>
+          <div class="sea-cell correct">63</div>
+          <div class="sea-cell correct">70 💎</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 4: Geri Sayım Denizaltısı -->
+      <div class="activity-card" style="border-color: #7dd3fc;">
+        <div class="activity-title" style="color: #0369a1;">
+          <span>⚓</span> 4. ETKİNLİK: Derinlikten Yüzeye (70'ten 7'ye Geri Sayım)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Denizaltı su yüzeyine çıkıyor! 70'ten geriye 7'şer sayarak boşlukları yaz:
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:4px;">
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">70</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="63" style="border:1.5px dashed #0284c7; color:#0369a1;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">56</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="49" style="border:1.5px dashed #0284c7; color:#0369a1;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">42</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="35" style="border:1.5px dashed #0284c7; color:#0369a1;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">28</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="21" style="border:1.5px dashed #0284c7; color:#0369a1;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">14</div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#e0f2fe; color:#0369a1; border:1.5px solid #0284c7;">7</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 5: Ritmik Adım Eşleştirme -->
+      <div class="activity-card" style="border-color: #7dd3fc;">
+        <div class="activity-title" style="color: #0369a1;">
+          <span>🔗</span> 5. ETKİNLİK: Adım Numarası ile Sayıyı Eşleştir
+        </div>
+        <div class="steps-matching">
+          <div>
+            <div class="match-row" style="margin-bottom:4px;"><span>7'şer saymada 4. adım</span> <span class="circle-dot"></span></div>
+            <div class="match-row" style="margin-bottom:4px;"><span>7'şer saymada 6. adım</span> <span class="circle-dot"></span></div>
+            <div class="match-row" style="margin-bottom:4px;"><span>7'şer saymada 8. adım</span> <span class="circle-dot"></span></div>
+            <div class="match-row"><span>7'şer saymada 9. adım</span> <span class="circle-dot"></span></div>
+          </div>
+          <div>
+            <div class="match-row" style="margin-bottom:4px;"><span class="circle-dot"></span> <span><strong>56</strong> (8. adım)</span></div>
+            <div class="match-row" style="margin-bottom:4px;"><span class="circle-dot"></span> <span><strong>28</strong> (4. adım)</span></div>
+            <div class="match-row" style="margin-bottom:4px;"><span class="circle-dot"></span> <span><strong>63</strong> (9. adım)</span></div>
+            <div class="match-row"><span class="circle-dot"></span> <span><strong>42</strong> (6. adım)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp'in Matematik Dünyası • 3. Sınıf</span>
+        <span>Okyanus görevini başarıyla tamamladın! 🌊</span>
+        <span>Öğretmen / Veli İmzası: _________</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - 8'er Ritmik Sayma Çalışma Kağıdı</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    :root {
+      --theme: #9333ea;
+      --theme-light: #faf5ff;
+      --theme-border: #d8b4fe;
+    }
+    .theme-header { border-bottom: 3px dashed var(--theme-border); }
+    .theme-badge { background: var(--theme); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 800; }
+    
+    .octo-track {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 4px 0;
+    }
+    .octo-item {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      border: 1.5px solid #9333ea;
+    }
+    .octo-filled {
+      background: #f3e8ff;
+      color: #6b21a8;
+    }
+    .octo-blank {
+      background: white;
+      border-style: dashed;
+      color: #9333ea;
+    }
+    body.show-answers .octo-blank::after {
+      content: attr(data-answer);
+      color: #15803d;
+      font-weight: 900;
+    }
+
+    /* Problem Cards */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 4px 0;
+    }
+    .problem-card {
+      background: #faf5ff;
+      border: 1.5px solid #d8b4fe;
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 0.78rem;
+    }
+    .problem-card strong {
+      color: #6b21a8;
+      display: block;
+      margin-top: 2px;
+      font-size: 0.9rem;
+    }
+
+    /* True False table */
+    .tf-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4px 0;
+    }
+    .tf-table th, .tf-table td {
+      border: 1px solid #d8b4fe;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+    }
+    .tf-table th {
+      background: #f3e8ff;
+      color: #6b21a8;
+      font-weight: 800;
+    }
+    .tf-box {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid #9333ea;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 20px;
+      font-weight: 800;
+      margin: 0 4px;
+    }
+    .tf-answer {
+      font-weight: 900;
+      color: #15803d;
+      margin-left: 6px;
+    }
+
+    /* Fast Mult Grid */
+    .fast-mult {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .fast-box {
+      background: #f3e8ff;
+      border: 1.5px solid #c084fc;
+      border-radius: 8px;
+      padding: 6px 4px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🦁 8'er Ritmik Sayma Macera Sayfası</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="document.body.classList.toggle('show-answers')" class="btn btn-answer">💡 Cevapları Göster/Gizle</button>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Header -->
+      <div class="sheet-header theme-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🦁</span>
+            <div>
+              <h1 class="sheet-title" style="color: #9333ea;">8'er Ritmik Sayma Çalışma Kağıdı</h1>
+              <p class="sheet-subtitle">Yiğit Alp ile Süper Kahraman Zirvesi • 3. Sınıf Ritmik Sayma & Çarpma</p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-badge">8'ER ŞAMPİYONLAR LİGİ</span>
+          </div>
+        </div>
+        <div class="student-info-bar">
+          <div class="info-item"><span>Adı Soyadı:</span> <span class="info-line"><strong>Yiğit Alp</strong></span></div>
+          <div class="info-item"><span>Tarih:</span> <span class="info-line"></span></div>
+          <div class="info-item"><span>Puan:</span> <span class="rating-stars">☆☆☆☆☆</span></div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 1: Kahraman Basamakları -->
+      <div class="activity-card" style="border-color: #d8b4fe;">
+        <div class="activity-title" style="color: #6b21a8;">
+          <span>⚡</span> 1. ETKİNLİK: Süper Kahraman Basamakları (Eksik Sayıları Yaz)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Kuleye tırmanmak için 8'er ileriye doğru sayarak boş basamakları tamamla:
+        </p>
+        <div class="octo-track">
+          <div class="octo-item octo-filled">8</div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-filled">16</div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-blank" data-answer="24"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-filled">32</div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-blank" data-answer="40"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-filled">48</div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-blank" data-answer="56"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-filled">64</div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-blank" data-answer="72"></div>
+          <span style="font-size:1.2rem; align-self:center; color:#9333ea;">➔</span>
+          <div class="octo-item octo-filled">80</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 2: Problem Çözme -->
+      <div class="activity-card" style="border-color: #d8b4fe;">
+        <div class="activity-title" style="color: #6b21a8;">
+          <span>🐙</span> 2. ETKİNLİK: Ahtapot & Örümcek Problemleri
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Her birinde 8 kol/bacak olduğunu unutma! 8'er sayarak problemleri çöz:
+        </p>
+        <div class="problem-grid">
+          <div class="problem-card">
+            🕷️ <strong>4 Örümceğin Bacakları:</strong>
+            1 örümcekte 8 bacak varsa, 4 örümcekte toplam kaç bacak olur?<br>
+            <strong>4 × 8 = <span class="answer-key-text">32</span><span style="color:#6b21a8;">[ &nbsp;&nbsp; ]</span></strong>
+          </div>
+          <div class="problem-card">
+            🐙 <strong>7 Ahtapotun Kolları:</strong>
+            1 ahtapotta 8 kol varsa, 7 ahtapotta toplam kaç kol vardır?<br>
+            <strong>7 × 8 = <span class="answer-key-text">56</span><span style="color:#6b21a8;">[ &nbsp;&nbsp; ]</span></strong>
+          </div>
+          <div class="problem-card">
+            📦 <strong>9 Paket Çikolata:</strong>
+            Her pakette 8 çikolata varsa, 9 pakette toplam kaç çikolata vardır?<br>
+            <strong>9 × 8 = <span class="answer-key-text">72</span><span style="color:#6b21a8;">[ &nbsp;&nbsp; ]</span></strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 3: Doğru mu Yanlış mı? -->
+      <div class="activity-card" style="border-color: #d8b4fe;">
+        <div class="activity-title" style="color: #6b21a8;">
+          <span>⚖️</span> 3. ETKİNLİK: Süper Hakem Yiğit Alp (Doğru [D] / Yanlış [Y])
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 4px;">
+          İfadeleri dikkatlice oku. Doğru olanlara <strong>[D]</strong>, yanlış olanlara <strong>[Y]</strong> yaz:
+        </p>
+        <table class="tf-table">
+          <thead>
+            <tr>
+              <th style="width: 75%;">İfade</th>
+              <th style="width: 25%;">D / Y</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8'den başlayıp 3 adım 8'er sayarsak 24 sayısına ulaşırız. (8, 16, 24)</td>
+              <td style="text-align:center;">
+                <span class="tf-box"></span>
+                <span class="answer-key-text tf-answer">DOĞRU (D)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>8'er ritmik saymada 40'tan hemen bir sonraki sayı 46'dır.</td>
+              <td style="text-align:center;">
+                <span class="tf-box"></span>
+                <span class="answer-key-text tf-answer">YANLIŞ (48 olmalı)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>8'er ritmik saymada söylediğimiz tüm sayıların birler basamağı çifttir.</td>
+              <td style="text-align:center;">
+                <span class="tf-box"></span>
+                <span class="answer-key-text tf-answer">DOĞRU (D)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>8'er saymada 7. adım 56 sayısıdır. (7 × 8 = 56)</td>
+              <td style="text-align:center;">
+                <span class="tf-box"></span>
+                <span class="answer-key-text tf-answer">DOĞRU (D)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Etkinlik 4: Geriye Sayım Şampiyonu -->
+      <div class="activity-card" style="border-color: #d8b4fe;">
+        <div class="activity-title" style="color: #6b21a8;">
+          <span>🏆</span> 4. ETKİNLİK: Geriye Doğru 8'er İniş (80'den 8'e)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          80'den başlayarak 8'er geriye doğru say ve kutuları tamamla:
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:4px;">
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">80</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="72" style="border:1.5px dashed #9333ea; color:#6b21a8;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">64</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="56" style="border:1.5px dashed #9333ea; color:#6b21a8;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">48</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="40" style="border:1.5px dashed #9333ea; color:#6b21a8;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">32</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="24" style="border:1.5px dashed #9333ea; color:#6b21a8;"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">16</div>
+          <span>⬅</span>
+          <div class="backward-box box-given" style="background:#f3e8ff; color:#6b21a8; border:1.5px solid #9333ea;">8</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 5: Hızlı Çarpım Şampiyonası -->
+      <div class="activity-card" style="border-color: #d8b4fe;">
+        <div class="activity-title" style="color: #6b21a8;">
+          <span>🎯</span> 5. ETKİNLİK: 8'ler Hızlı Çarpım Şimşeği
+        </div>
+        <div class="fast-mult">
+          <div class="fast-box">2 × 8 = <br><span class="answer-key-text">16</span><strong>[ &nbsp; ]</strong></div>
+          <div class="fast-box">5 × 8 = <br><span class="answer-key-text">40</span><strong>[ &nbsp; ]</strong></div>
+          <div class="fast-box">6 × 8 = <br><span class="answer-key-text">48</span><strong>[ &nbsp; ]</strong></div>
+          <div class="fast-box">8 × 8 = <br><span class="answer-key-text">64</span><strong>[ &nbsp; ]</strong></div>
+          <div class="fast-box">9 × 8 = <br><span class="answer-key-text">72</span><strong>[ &nbsp; ]</strong></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp'in Matematik Dünyası • 3. Sınıf</span>
+        <span>Süper Kahraman rozetini kazandın! 🦁</span>
+        <span>Öğretmen / Veli İmzası: _________</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

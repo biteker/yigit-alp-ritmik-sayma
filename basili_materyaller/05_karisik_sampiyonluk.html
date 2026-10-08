@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - 6, 7, 8 Karışık Ritmik Şampiyonlar Ligi</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    :root {
+      --theme: #10b981;
+      --theme-light: #ecfdf5;
+      --theme-border: #6ee7b7;
+    }
+    .theme-header { border-bottom: 3px dashed var(--theme-border); }
+    .theme-badge { background: #059669; color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 800; }
+    
+    .train-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 8px 0;
+    }
+    .train-wagon {
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .wagon-6-theme { border-color: #f97316; background: #fff7ed; }
+    .wagon-7-theme { border-color: #0284c7; background: #f0f9ff; }
+    .wagon-8-theme { border-color: #9333ea; background: #faf5ff; }
+    
+    .wagon-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .number-bank {
+      background: #f8fafc;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .bank-chip {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .rule-detective-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin: 6px 0;
+    }
+    .rule-box {
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 0.82rem;
+    }
+
+    .ten-questions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .q-box {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .special-box {
+      background: #fefce8;
+      border: 1.5px solid #fde047;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-top: 8px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🏆 6, 7, 8 Karışık Ritmik Şampiyonlar Ligi</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="document.body.classList.toggle('show-answers')" class="btn btn-answer">💡 Cevapları Göster/Gizle</button>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Header -->
+      <div class="sheet-header theme-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🏆</span>
+            <div>
+              <h1 class="sheet-title" style="color: #059669;">6, 7 ve 8'er Karışık Şampiyonluk Testi</h1>
+              <p class="sheet-subtitle">Yiğit Alp'in Büyük Matematik Sınavı • Ritmik Sayma & Çarpma Ustası</p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-badge">SÜPER ŞAMPİYONLUK KUPASI</span>
+          </div>
+        </div>
+        <div class="student-info-bar">
+          <div class="info-item"><span>Adı Soyadı:</span> <span class="info-line"><strong>Yiğit Alp</strong></span></div>
+          <div class="info-item"><span>Tarih:</span> <span class="info-line"></span></div>
+          <div class="info-item"><span>Hedef Skor:</span> <span class="rating-stars">100 / 100 ⭐</span></div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 1: Sayı Havuzunu Vagonlara Yerleştir -->
+      <div class="activity-card" style="border-color: #6ee7b7;">
+        <div class="activity-title" style="color: #059669;">
+          <span>🚂</span> 1. ETKİNLİK: Karışık Sayıları Doğru Vagonlara Taşı
+        </div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 4px;">
+          Aşağıdaki sayı havuzundaki sayıları ait oldukları ritmik vagonların içine yaz:
+        </p>
+        <div class="number-bank">
+          <span class="bank-chip">18</span>
+          <span class="bank-chip">28</span>
+          <span class="bank-chip">32</span>
+          <span class="bank-chip">35</span>
+          <span class="bank-chip">54</span>
+          <span class="bank-chip">63</span>
+          <span class="bank-chip">64</span>
+          <span class="bank-chip">72</span>
+        </div>
+        <div class="train-container">
+          <div class="train-wagon wagon-6-theme">
+            <div class="wagon-title" style="color:#c2410c;">🚀 6'şar Vagonu</div>
+            <p style="font-size:0.75rem; color:#64748b;">(Sadece 6'nın katları)</p>
+            <div style="min-height:36px; padding-top:6px; font-weight:800; color:#ea580c;">
+              <span class="answer-key-text">18, 54</span>
+              <span style="border-bottom:1px dotted #ea580c; display:inline-block; width:80%;">______ , ______</span>
+            </div>
+          </div>
+          <div class="train-wagon wagon-7-theme">
+            <div class="wagon-title" style="color:#0369a1;">🌊 7'şer Vagonu</div>
+            <p style="font-size:0.75rem; color:#64748b;">(Sadece 7'nin katları)</p>
+            <div style="min-height:36px; padding-top:6px; font-weight:800; color:#0284c7;">
+              <span class="answer-key-text">28, 35, 63</span>
+              <span style="border-bottom:1px dotted #0284c7; display:inline-block; width:80%;">___ , ___ , ___</span>
+            </div>
+          </div>
+          <div class="train-wagon wagon-8-theme">
+            <div class="wagon-title" style="color:#7e22ce;">🦁 8'er Vagonu</div>
+            <p style="font-size:0.75rem; color:#64748b;">(Sadece 8'in katları)</p>
+            <div style="min-height:36px; padding-top:6px; font-weight:800; color:#9333ea;">
+              <span class="answer-key-text">32, 64, 72</span>
+              <span style="border-bottom:1px dotted #9333ea; display:inline-block; width:80%;">___ , ___ , ___</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 2: Kuralı Bul Dedektifi -->
+      <div class="activity-card" style="border-color: #6ee7b7;">
+        <div class="activity-title" style="color: #059669;">
+          <span>🔍</span> 2. ETKİNLİK: Kuralı Bul Dedektifi (Kaçar Kaçar Sayılmış?)
+        </div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 6px;">
+          Sayı dizilerini incele, kaçar kaçar sayıldığını kutucuğa yaz:
+        </p>
+        <div class="rule-detective-grid">
+          <div class="rule-box">
+            <strong>Dizi A:</strong> 21, 28, 35, 42, 49<br>
+            Kural: <span class="answer-key-text">7'şer</span> <strong>[ &nbsp;&nbsp;&nbsp; ] sayma</strong>
+          </div>
+          <div class="rule-box">
+            <strong>Dizi B:</strong> 30, 36, 42, 48, 54<br>
+            Kural: <span class="answer-key-text">6'şar</span> <strong>[ &nbsp;&nbsp;&nbsp; ] sayma</strong>
+          </div>
+          <div class="rule-box">
+            <strong>Dizi C:</strong> 40, 48, 56, 64, 72<br>
+            Kural: <span class="answer-key-text">8'er</span> <strong>[ &nbsp;&nbsp;&nbsp; ] sayma</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 3: Özel Ortak Duraklar (Zeka Sorusu) -->
+      <div class="special-box">
+        <strong style="color:#854d0e;">💡 Yiğit Alp İçin Zeka Sorusu (Ortak Duraklar):</strong><br>
+        • Hem 6'şar hem 8'er sayarken söylediğimiz ve 30'dan küçük olan sayı hangisidir? ➔ <strong>[ &nbsp;<span class="answer-key-text">24</span>&nbsp; ]</strong> (6×4=24 ve 8×3=24)<br>
+        • Hem 6'şar hem 7'şer sayarken söylediğimiz sayı hangisidir? ➔ <strong>[ &nbsp;<span class="answer-key-text">42</span>&nbsp; ]</strong> (6×7=42 ve 7×6=42)<br>
+        • Hem 7'şer hem 8'er sayarken söylediğimiz sayı hangisidir? ➔ <strong>[ &nbsp;<span class="answer-key-text">56</span>&nbsp; ]</strong> (7×8=56 ve 8×7=56)
+      </div>
+
+      <!-- Etkinlik 4: 8 Hızlı Çarpım Şimşeği -->
+      <div class="activity-card" style="border-color: #6ee7b7; margin-top: 8px;">
+        <div class="activity-title" style="color: #059669;">
+          <span>⚡</span> 4. ETKİNLİK: Şampiyonluk Çarpma Şimşeği (1 Dakika Meydan Okuması)
+        </div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 6px;">
+          Ritmik sayma gücünü kullanarak hızlıca sonuçları yaz:
+        </p>
+        <div class="ten-questions-grid">
+          <div class="q-box">6 × 4 = <span class="answer-key-text">24</span>[ &nbsp; ]</div>
+          <div class="q-box">7 × 3 = <span class="answer-key-text">21</span>[ &nbsp; ]</div>
+          <div class="q-box">8 × 4 = <span class="answer-key-text">32</span>[ &nbsp; ]</div>
+          <div class="q-box">6 × 7 = <span class="answer-key-text">42</span>[ &nbsp; ]</div>
+          <div class="q-box">7 × 7 = <span class="answer-key-text">49</span>[ &nbsp; ]</div>
+          <div class="q-box">8 × 6 = <span class="answer-key-text">48</span>[ &nbsp; ]</div>
+          <div class="q-box">7 × 8 = <span class="answer-key-text">56</span>[ &nbsp; ]</div>
+          <div class="q-box">8 × 8 = <span class="answer-key-text">64</span>[ &nbsp; ]</div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp'in Matematik Dünyası • 3. Sınıf</span>
+        <span>TEBRİKLER! Ritmik Sayma Şampiyonluk Madalyasını Hak Ettin! 🥇</span>
+        <span>Öğretmen / Veli İmzası: _________</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

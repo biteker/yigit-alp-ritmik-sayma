@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - 6'şar Ritmik Sayma Çalışma Kağıdı</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    :root {
+      --theme: #ea580c;
+      --theme-light: #fff7ed;
+      --theme-border: #fdba74;
+    }
+    .theme-header { border-bottom: 3px dashed var(--theme-border); }
+    .theme-badge { background: var(--theme); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 800; }
+    
+    /* Honeycomb Maze */
+    .maze-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      margin: 4px 0;
+    }
+    .maze-cell {
+      padding: 4px 2px;
+      text-align: center;
+      border: 1.5px solid #fed7aa;
+      background: #fffbeb;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: #78350f;
+    }
+    .maze-cell.correct {
+      border-color: #f97316;
+      background: #ffedd5;
+      font-weight: 900;
+    }
+    body.show-answers .maze-cell.correct {
+      background: #fde047 !important;
+      border-color: #eab308 !important;
+      box-shadow: 0 0 5px rgba(234, 179, 8, 0.6);
+    }
+    
+    /* Detective Table */
+    .detective-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+    .detective-table th, .detective-table td {
+      border: 1px solid #fed7aa;
+      padding: 4px 8px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .detective-table th {
+      background: #ffedd5;
+      color: #9a3412;
+      font-weight: 800;
+    }
+    .input-box {
+      display: inline-block;
+      width: 45px;
+      height: 24px;
+      border-bottom: 2px solid #ea580c;
+    }
+    
+    /* Parachute Backward */
+    .backward-track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6px 0;
+      gap: 4px;
+    }
+    .backward-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+    .box-given {
+      background: #ffedd5;
+      color: #9a3412;
+      border: 1.5px solid #ea580c;
+    }
+    .box-blank {
+      background: white;
+      border: 1.5px dashed #ea580c;
+      color: #9a3412;
+    }
+    body.show-answers .box-blank::after {
+      content: attr(data-answer);
+      color: #15803d;
+      font-weight: 900;
+    }
+
+    .mult-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .mult-card {
+      background: #fff7ed;
+      border: 1.5px solid #fdba74;
+      border-radius: 6px;
+      padding: 4px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+      border: 1.5px solid #fdba74;
+      border-radius: 8px;
+      padding: 6px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🚀 6'şar Ritmik Sayma Macera Sayfası</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="document.body.classList.toggle('show-answers')" class="btn btn-answer">💡 Cevapları Göster/Gizle</button>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Header -->
+      <div class="sheet-header theme-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🚀</span>
+            <div>
+              <h1 class="sheet-title" style="color: #ea580c;">6'şar Ritmik Sayma Çalışma Kağıdı</h1>
+              <p class="sheet-subtitle">Yiğit Alp ile Matematik Gezisi • 3. Sınıf Ritmik Sayma & Çarpma</p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-badge">6'ŞAR UZAY SEFERİ</span>
+          </div>
+        </div>
+        <div class="student-info-bar">
+          <div class="info-item"><span>Adı Soyadı:</span> <span class="info-line"><strong>Yiğit Alp</strong></span></div>
+          <div class="info-item"><span>Tarih:</span> <span class="info-line"></span></div>
+          <div class="info-item"><span>Puan:</span> <span class="rating-stars">☆☆☆☆☆</span></div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 1: Roket İstasyonu -->
+      <div class="activity-card" style="border-color: #fdba74;">
+        <div class="activity-title" style="color: #c2410c;">
+          <span>🌟</span> 1. ETKİNLİK: Roketin Yıldız Rotası (Eksik Sayıları Tamamla)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Roketin Ay'a ulaşabilmesi için 6'şar ileriye doğru sayarak boş halkaları doldur:
+        </p>
+        <div class="number-train">
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">6</div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">12</div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-empty" data-answer="18" style="border-color:#ea580c;"></div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">24</div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-empty" data-answer="30" style="border-color:#ea580c;"></div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">36</div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-empty" data-answer="42" style="border-color:#ea580c;"></div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">48</div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-empty" data-answer="54" style="border-color:#ea580c;"></div>
+          <span class="wagon-arrow">➜</span>
+          <div class="number-wagon wagon-filled" style="background:#ffedd5; color:#9a3412; border-color:#ea580c;">60</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 2: Petek Labirenti -->
+      <div class="activity-card" style="border-color: #fdba74;">
+        <div class="activity-title" style="color: #c2410c;">
+          <span>🐝</span> 2. ETKİNLİK: Arı Maya'nın 6'şar Bal Yolu Labirenti
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Sadece <strong>6'şar ritmik sayma</strong> sayılarını sırasıyla boyayarak Arı'yı kovanına ulaştır (6'dan 60'a kadar):
+        </p>
+        <div class="maze-grid">
+          <div class="maze-cell correct">6 🐝</div>
+          <div class="maze-cell">10</div>
+          <div class="maze-cell">15</div>
+          <div class="maze-cell">22</div>
+          <div class="maze-cell">35</div>
+          <div class="maze-cell">50</div>
+
+          <div class="maze-cell correct">12</div>
+          <div class="maze-cell correct">18</div>
+          <div class="maze-cell correct">24</div>
+          <div class="maze-cell">28</div>
+          <div class="maze-cell">34</div>
+          <div class="maze-cell">55</div>
+
+          <div class="maze-cell">14</div>
+          <div class="maze-cell">19</div>
+          <div class="maze-cell correct">30</div>
+          <div class="maze-cell correct">36</div>
+          <div class="maze-cell">40</div>
+          <div class="maze-cell">58</div>
+
+          <div class="maze-cell">16</div>
+          <div class="maze-cell">25</div>
+          <div class="maze-cell">31</div>
+          <div class="maze-cell correct">42</div>
+          <div class="maze-cell correct">48</div>
+          <div class="maze-cell">50</div>
+
+          <div class="maze-cell">20</div>
+          <div class="maze-cell">27</div>
+          <div class="maze-cell">38</div>
+          <div class="maze-cell">44</div>
+          <div class="maze-cell correct">54</div>
+          <div class="maze-cell correct">60 🍯</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 3: Dedektif Yiğit Alp -->
+      <div class="activity-card" style="border-color: #fdba74;">
+        <div class="activity-title" style="color: #c2410c;">
+          <span>🔍</span> 3. ETKİNLİK: Dedektif Yiğit Alp (Hatalı Sayıyı Yakala!)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 4px;">
+          Aşağıdaki sayma dizilerine birer davetsiz hatalı sayı karışmış! Hatalıyı bul ve doğrusunu yaz:
+        </p>
+        <table class="detective-table">
+          <thead>
+            <tr>
+              <th>Ritmik Sayma Dizisi</th>
+              <th>Hatalı Sayı</th>
+              <th>Doğru Sayı Ne Olmalıydı?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6 - 12 - 18 - <strong style="color:#dc2626;">25</strong> - 30 - 36</td>
+              <td><span class="answer-key-text">25</span><span style="font-weight:800;">_____</span></td>
+              <td><span class="answer-key-text">24</span><span style="font-weight:800;">_____</span></td>
+            </tr>
+            <tr>
+              <td>24 - 30 - 36 - 42 - <strong style="color:#dc2626;">49</strong> - 54</td>
+              <td><span class="answer-key-text">49</span><span style="font-weight:800;">_____</span></td>
+              <td><span class="answer-key-text">48</span><span style="font-weight:800;">_____</span></td>
+            </tr>
+            <tr>
+              <td>60 - 54 - 48 - <strong style="color:#dc2626;">41</strong> - 36 - 30 (Geriye)</td>
+              <td><span class="answer-key-text">41</span><span style="font-weight:800;">_____</span></td>
+              <td><span class="answer-key-text">42</span><span style="font-weight:800;">_____</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Etkinlik 4: Geriye Sayma Paraşütü -->
+      <div class="activity-card" style="border-color: #fdba74;">
+        <div class="activity-title" style="color: #c2410c;">
+          <span>🪂</span> 4. ETKİNLİK: Geri Sayım Paraşütü (60'tan 6'ya Geriye İniş)
+        </div>
+        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">
+          Paraşütle güvenli iniş için 60'tan başlayarak 6'şar geriye doğru say ve kutuları doldur:
+        </p>
+        <div class="backward-track">
+          <div class="backward-box box-given">60</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="54"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given">48</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="42"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given">36</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="30"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given">24</div>
+          <span>⬅</span>
+          <div class="backward-box box-blank" data-answer="18"></div>
+          <span>⬅</span>
+          <div class="backward-box box-given">12</div>
+          <span>⬅</span>
+          <div class="backward-box box-given">6</div>
+        </div>
+      </div>
+
+      <!-- Etkinlik 5: Çarpma Köprüsü -->
+      <div class="activity-card" style="border-color: #fdba74;">
+        <div class="activity-title" style="color: #c2410c;">
+          <span>⚡</span> 5. ETKİNLİK: Ritmik Saymadan Çarpmaya Yıldız Köprüsü
+        </div>
+        <div class="mult-grid">
+          <div class="mult-card">
+            3 tane 6<br>
+            <strong>3 × 6 = </strong>
+            <span class="answer-key-text">18</span><span style="color:#ea580c;">[ &nbsp; ]</span>
+          </div>
+          <div class="mult-card">
+            5 tane 6<br>
+            <strong>5 × 6 = </strong>
+            <span class="answer-key-text">30</span><span style="color:#ea580c;">[ &nbsp; ]</span>
+          </div>
+          <div class="mult-card">
+            7 tane 6<br>
+            <strong>7 × 6 = </strong>
+            <span class="answer-key-text">42</span><span style="color:#ea580c;">[ &nbsp; ]</span>
+          </div>
+          <div class="mult-card">
+            9 tane 6<br>
+            <strong>9 × 6 = </strong>
+            <span class="answer-key-text">54</span><span style="color:#ea580c;">[ &nbsp; ]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp'in Matematik Dünyası • 3. Sınıf</span>
+        <span>Harika çalıştın! 6'şar sayma ustası oldun! 🌟</span>
+        <span>Öğretmen / Veli İmzası: _________</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

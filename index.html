@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Sayma Dünyası (3. Sınıf)</title>
+  <link rel="stylesheet" href="basili_materyaller/print_style.css">
+  <style>
+    body {
+      background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #0f172a 70%, #020617 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .landing-box {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .main-hero {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 36px 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .main-hero h1 {
+      font-family: 'Fredoka', cursive;
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #38bdf8, #f59e0b, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .main-hero p {
+      color: #cbd5e1;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto 24px auto;
+    }
+    .action-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .big-btn {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.25rem;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+      font-weight: 700;
+    }
+    .big-game-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    }
+    .big-game-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.55);
+    }
+    .big-pdf-btn {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    }
+    .big-pdf-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.55);
+    }
+    
+    .section-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .feat-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      text-decoration: none;
+      color: #f8fafc;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .feat-card:hover {
+      background: rgba(30, 41, 59, 0.9);
+      border-color: #38bdf8;
+      transform: translateY(-3px);
+    }
+    .feat-card h3 {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      color: #38bdf8;
+    }
+    .feat-card p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="landing-box">
+    
+    <div class="main-hero">
+      <div style="font-size: 3.5rem; margin-bottom: 10px;">🌟🚀🦁</div>
+      <h1>Yiğit Alp: Ritmik Sayma Dünyası</h1>
+      <p>
+        3. Sınıf öğrencisi Yiğit Alp için özel olarak hazırlanan <strong>6'şar, 7'şer ve 8'er ritmik sayma</strong> 
+        etkileşimli web oyunu, A4 baskıya hazır renkli çalışma kağıtları, tekerlemeler, kes-yapıştır flaş kartlar ve ritmik sayma çarkı!
+      </p>
+
+      <div class="action-row">
+        <a href="oyun/index.html" class="big-btn big-game-btn">
+          <span>🎮</span> OYUNU BAŞLAT
+        </a>
+        <a href="basili_materyaller/tum_materyaller_rehberi.html" class="big-btn big-pdf-btn">
+          <span>📄</span> BASILI MATERYALLERİ AÇ
+        </a>
+      </div>
+    </div>
+
+    <div style="font-family:'Fredoka', cursive; font-size:1.35rem; color:#f8fafc; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+      <span>📂</span> Hazırlanan Tüm Materyaller ve Doğrudan Bağlantılar:
+    </div>
+
+    <div class="section-cards">
+      <a href="pdf_ciktilari/01_ritmik_sayma_posteri.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🏆 1. Ritmik Başucu Posteri</h3>
+          <p>6, 7 ve 8'lerin bir arada olduğu, masaya asılabilen renkli A4 özet posteri ve tüyolar.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/02_6sar_calisma_kagidi.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🚀 2. 6'şar Çalışma Kağıdı</h3>
+          <p>Yıldız treni, Arı Maya petek labirenti, hatalı sayı dedektifi ve iniş paraşütü.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/03_7ser_calisma_kagidi.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🌊 3. 7'şer Çalışma Kağıdı</h3>
+          <p>Denizaltı incileri, takvim-hafta problemleri, batık hazine labirenti ve derinlik sayımı.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/04_8er_calisma_kagidi.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🦁 4. 8'er Çalışma Kağıdı</h3>
+          <p>Süper kahraman basamakları, örümcek & ahtapot zeka soruları, hakem modu ve hızlı çarpma.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/05_karisik_sampiyonluk.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🥇 5. Karışık Şampiyonlar Ligi</h3>
+          <p>3 vagonlu ritmik tren, kuralı bulma, ortak duraklar (24, 42, 56) ve şampiyonluk testi.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/06_kes_yapistir_kartlar.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>✂️ 6. Flaş & Hafıza Kartları</h3>
+          <p>Makasla kesilip eşleştirme ve hafıza oyunu oynanabilen 2 sayfalık çiftli kart seti.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="pdf_ciktilari/07_ritmik_cark_ve_cetvel.pdf" target="_blank" class="feat-card">
+        <div>
+          <h3>🎡 7. Ritmik Çark & Cetveller</h3>
+          <p>Döndürülebilir ritmik çark ve kitapların içine konabilen 3 adet renkli cep cetveli.</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
+      </a>
+
+      <a href="oyun/index.html" class="feat-card" style="border-color:#f59e0b; background:rgba(245, 158, 11, 0.1);">
+        <div>
+          <h3 style="color:#fbbf24;">🎮 8. Etkileşimli Macera Oyunu</h3>
+          <p>Roket Fırlatma, Dedektif, 60 Saniye Şampiyonu ve Refleks modları + Diplomalı!</p>
+        </div>
+        <div style="margin-top:10px; font-weight:800; color:#fbbf24; font-size:0.8rem;">Oyuna Git ➜</div>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Flaş Kartlar & Hafıza Oyunu</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    .flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .f-card {
+      border: 2px dashed #94a3b8;
+      border-radius: 8px;
+      padding: 10px 6px;
+      text-align: center;
+      background: #ffffff;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .f-card::before {
+      content: '✂';
+      position: absolute;
+      top: -10px;
+      left: 6px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      background: white;
+      padding: 0 2px;
+    }
+    .f-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .tag-6 { background: #ffedd5; color: #ea580c; }
+    .tag-7 { background: #e0f2fe; color: #0284c7; }
+    .tag-8 { background: #f3e8ff; color: #9333ea; }
+    
+    .f-prompt {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #475569;
+    }
+    .f-value {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .val-6 { color: #ea580c; }
+    .val-7 { color: #0284c7; }
+    .val-8 { color: #9333ea; }
+
+    .instructions-bar {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>✂️ Yiğit Alp Ritmik Flaş Kartlar & Hafıza Oyunu</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    
+    <!-- SAYFA 1: 6'ŞAR VE 7'ŞER KARTLARI -->
+    <div class="a4-page">
+      <div class="sheet-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">✂️</span>
+            <div>
+              <h1 class="sheet-title">Ritmik Flaş & Hafıza Kartları (Sayfa 1)</h1>
+              <p class="sheet-subtitle">Yiğit Alp İçin Kesilip Oynanabilir Eğitici Oyun Kartları</p>
+            </div>
+          </div>
+          <div>
+            <span style="background:#2563eb; color:white; padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:800;">
+              KES & OYNA • SAYFA 1
+            </span>
+          </div>
+        </div>
+        <div class="instructions-bar">
+          <strong>🎮 Nasıl Oynanır?</strong><br>
+          1. Kesik çizgilerden (✂) kartları dikkatlice kes.<br>
+          2. <strong>Hafıza Oyunu:</strong> Kartları ters çevirip masaya diz. Sırayla 2 kart açıp soru ve cevabı eşleştiren kartı kazanır!<br>
+          3. <strong>Flaş Kart Hız Testi:</strong> Biri soruyu göstersin, Yiğit Alp 3 saniyede cevabı söylesin!
+        </div>
+      </div>
+
+      <!-- Kartlar Izgarası: 16 Kart -->
+      <div class="flashcards-grid">
+        <!-- 6'şar Kartları -->
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR SORU</span>
+          <div class="f-prompt">6'nın 2. adımı<br>(2 × 6)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR CEVAP</span>
+          <div class="f-value val-6">12</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR SORU</span>
+          <div class="f-prompt">6'nın 4. adımı<br>(4 × 6)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR CEVAP</span>
+          <div class="f-value val-6">24</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR SORU</span>
+          <div class="f-prompt">6'nın 6. adımı<br>(6 × 6)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR CEVAP</span>
+          <div class="f-value val-6">36</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR SORU</span>
+          <div class="f-prompt">6'nın 7. adımı<br>(7 × 6)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR CEVAP</span>
+          <div class="f-value val-6">42</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR SORU</span>
+          <div class="f-prompt">6'nın 9. adımı<br>(9 × 6)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-6">6'ŞAR CEVAP</span>
+          <div class="f-value val-6">54</div>
+        </div>
+
+        <!-- 7'şer Kartları -->
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 2. adımı<br>(2 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">14</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 3. adımı<br>(3 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">21</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 5. adımı<br>(5 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">35</div>
+        </div>
+      </div>
+
+      <div class="sheet-footer">
+        <span>Yiğit Alp • Flaş Kart Seti</span>
+        <span>Makasla dikkatlice çizgilerden kesip kullanabilirsin! ✂️</span>
+        <span>Sayfa 1 / 2</span>
+      </div>
+    </div>
+
+    <!-- SAYFA 2: 7'ŞER DEVAMI VE 8'ER KARTLARI -->
+    <div class="a4-page">
+      <div class="sheet-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">✂️</span>
+            <div>
+              <h1 class="sheet-title">Ritmik Flaş & Hafıza Kartları (Sayfa 2)</h1>
+              <p class="sheet-subtitle">Yiğit Alp İçin 7'şer ve 8'er Ritmik Eşleştirme Kartları</p>
+            </div>
+          </div>
+          <div>
+            <span style="background:#7e22ce; color:white; padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:800;">
+              KES & OYNA • SAYFA 2
+            </span>
+          </div>
+        </div>
+        <div class="instructions-bar">
+          <strong>💡 İpucu:</strong> Kartları biraz sert olsun diye arkasına karton veya resim kağıdı yapıştırarak da kesebilirsin! Böylece cep kartı gibi uzun süre yıpranmadan kullanabilirsin.
+        </div>
+      </div>
+
+      <!-- Kartlar Izgarası: 16 Kart -->
+      <div class="flashcards-grid">
+        <!-- 7'şer Devamı -->
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 7. adımı<br>(7 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">49</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 8. adımı<br>(8 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">56</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER SORU</span>
+          <div class="f-prompt">7'nin 9. adımı<br>(9 × 7)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-7">7'ŞER CEVAP</span>
+          <div class="f-value val-7">63</div>
+        </div>
+
+        <!-- 8'er Kartları -->
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER SORU</span>
+          <div class="f-prompt">8'in 2. adımı<br>(2 × 8)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER CEVAP</span>
+          <div class="f-value val-8">16</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER SORU</span>
+          <div class="f-prompt">8'in 3. adımı<br>(3 × 8)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER CEVAP</span>
+          <div class="f-value val-8">24</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER SORU</span>
+          <div class="f-prompt">8'in 5. adımı<br>(5 × 8)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER CEVAP</span>
+          <div class="f-value val-8">40</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER SORU</span>
+          <div class="f-prompt">8'in 6. adımı<br>(6 × 8)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER CEVAP</span>
+          <div class="f-value val-8">48</div>
+        </div>
+
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER SORU</span>
+          <div class="f-prompt">8'in 8. adımı<br>(8 × 8)</div>
+        </div>
+        <div class="f-card">
+          <span class="f-tag tag-8">8'ER CEVAP</span>
+          <div class="f-value val-8">64</div>
+        </div>
+      </div>
+
+      <div class="sheet-footer">
+        <span>Yiğit Alp • Flaş Kart Seti</span>
+        <span>Tüm kartları topla, ritmik sayma şampiyonu ol! 🌟</span>
+        <span>Sayfa 2 / 2</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

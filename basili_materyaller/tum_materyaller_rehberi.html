@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Sayma Eğitim & Materyal Portalı</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 50%, #faf5ff 100%);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+    .portal-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero-banner {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 3px solid #e2e8f0;
+    }
+    .hero-text h1 {
+      font-family: 'Fredoka', cursive;
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .hero-text p {
+      color: #64748b;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .game-launch-btn {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      font-family: 'Fredoka', cursive;
+      font-size: 1.25rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(217, 119, 6, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+    .game-launch-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 22px rgba(217, 119, 6, 0.45);
+    }
+    
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .mat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 2px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    .mat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      border-color: #3b82f6;
+    }
+    .mat-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .mat-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    .mat-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.25rem;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .mat-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      text-transform: uppercase;
+    }
+    .mat-desc {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-bottom: 18px;
+      line-height: 1.45;
+    }
+    .mat-links {
+      display: flex;
+      gap: 10px;
+    }
+    .mat-btn {
+      flex: 1;
+      text-align: center;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-view {
+      background: #f1f5f9;
+      color: #334155;
+    }
+    .btn-view:hover {
+      background: #e2e8f0;
+    }
+    .btn-direct-print {
+      background: #2563eb;
+      color: white;
+    }
+    .btn-direct-print:hover {
+      background: #1d4ed8;
+    }
+
+    .parent-guide {
+      background: white;
+      border-radius: 16px;
+      padding: 26px 32px;
+      margin-top: 35px;
+      border: 2px solid #cbd5e1;
+    }
+    .parent-guide h3 {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.35rem;
+      color: #0f172a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .guide-tips {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-text">
+        <h1>🌟 Yiğit Alp: Ritmik Sayma Portalı</h1>
+        <p>3. Sınıf • 6'şar, 7'şer ve 8'er Ritmik Sayma & Çarpma Hazırlık Atölyesi</p>
+      </div>
+      <div class="hero-actions">
+        <a href="../oyun/index.html" class="game-launch-btn">
+          <span>🎮</span> ETKİLEŞİMLİ OYUNU BAŞLAT
+        </a>
+      </div>
+    </div>
+
+    <!-- Materyaller Izgarası -->
+    <div class="grid-cards">
+      
+      <!-- 01: Poster -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🏆</span>
+            <div>
+              <span class="mat-badge" style="background:#fef3c7; color:#b45309;">BAŞUCU REHBERİ</span>
+              <h2 class="mat-title">Ritmik Sayma Başucu Posteri</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            6'şar (Roket), 7'şer (Okyanus) ve 8'er (Aslan) saymaların bir arada olduğu renkli A4 poster. Çalışma masasına veya duvara asılabilir.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="01_ritmik_sayma_posteri.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/01_ritmik_sayma_posteri.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 02: 6'şar Çalışma Kağıdı -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🚀</span>
+            <div>
+              <span class="mat-badge" style="background:#ffedd5; color:#c2410c;">6'ŞAR ETKİNLİK</span>
+              <h2 class="mat-title">6'şar Sayma Çalışma Kağıdı</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Yıldız treni eksik halkalar, Arı Maya kovan labirenti, hatalı sayı dedektifi, 60'tan geriye iniş paraşütü ve çarpma köprüsü.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="02_6sar_calisma_kagidi.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/02_6sar_calisma_kagidi.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 03: 7'şer Çalışma Kağıdı -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🌊</span>
+            <div>
+              <span class="mat-badge" style="background:#e0f2fe; color:#0369a1;">7'ŞER ETKİNLİK</span>
+              <h2 class="mat-title">7'şer Sayma Çalışma Kağıdı</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Sihirli inci taneleri, takvim/hafta dedektifi (1 hafta = 7 gün), batık hazine okyanus labirenti, 70'ten geriye iniş ve adım eşleştirme.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="03_7ser_calisma_kagidi.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/03_7ser_calisma_kagidi.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 04: 8'er Çalışma Kağıdı -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🦁</span>
+            <div>
+              <span class="mat-badge" style="background:#f3e8ff; color:#7e22ce;">8'ER ETKİNLİK</span>
+              <h2 class="mat-title">8'er Sayma Çalışma Kağıdı</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Kahraman tırmanış basamakları, örümcek & ahtapot kolları problemleri, doğru/yanlış hakemi, 80'den 8'e iniş ve hızlı çarpım testi.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="04_8er_calisma_kagidi.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/04_8er_calisma_kagidi.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 05: Karışık Şampiyonluk Kağıdı -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🥇</span>
+            <div>
+              <span class="mat-badge" style="background:#dcfce7; color:#15803d;">BÜYÜK FİNAL</span>
+              <h2 class="mat-title">6, 7, 8 Karışık Şampiyonlar Ligi</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            3 vagonlu ritmik tren ayrıştırma, kuralı bul dedektifi, ortak duraklar (24, 42, 56) zeka sorusu ve 8 soruluk hızlı çarpım şimşeği.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="05_karisik_sampiyonluk.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/05_karisik_sampiyonluk.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 06: Kes & Oyna Flaş Kartlar -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">✂️</span>
+            <div>
+              <span class="mat-badge" style="background:#f1f5f9; color:#475569;">OYUN KARTLARI</span>
+              <h2 class="mat-title">Ritmik Flaş & Hafıza Kartları</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Makasla kesip evde hafıza oyunu, soru-cevap yarışması veya flaş kart çalışması yapabileceğiniz 2 sayfalık çiftli kart seti.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="06_kes_yapistir_kartlar.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/06_kes_yapistir_kartlar.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 07: Çark & Cetveller -->
+      <div class="mat-card">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🎡</span>
+            <div>
+              <span class="mat-badge" style="background:#fef3c7; color:#b45309;">EL BECERİSİ & ARAÇ</span>
+              <h2 class="mat-title">Ritmik Çark & Kalemlik Cetvelleri</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Ortasından raptiye ile döndürülebilen ritmik çark ve kitapların/kalem kutusunun içine sığan 3 adet şık ritmik cetvel.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="07_ritmik_cark_ve_cetvel.html" class="mat-btn btn-view">👁️ İncele</a>
+          <a href="../pdf_ciktilari/07_ritmik_cark_ve_cetvel.pdf" target="_blank" class="mat-btn btn-direct-print">📄 PDF Aç / Yazdır</a>
+        </div>
+      </div>
+
+      <!-- 08: Etkileşimli Oyun Kartı -->
+      <div class="mat-card" style="border: 2px solid #f59e0b; background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);">
+        <div>
+          <div class="mat-header">
+            <span class="mat-icon">🎮</span>
+            <div>
+              <span class="mat-badge" style="background:#f59e0b; color:white;">BİLGİSAYAR / TABLET</span>
+              <h2 class="mat-title">Yiğit Alp Ritmik Macera Oyunu</h2>
+            </div>
+          </div>
+          <p class="mat-desc">
+            Roket Fırlatma, Dedektif, 60 Saniye Şampiyonu ve Refleks modları olan ses efektli, madalyalı ve yazdırılabilir sertifikalı harika web oyunu.
+          </p>
+        </div>
+        <div class="mat-links">
+          <a href="../oyun/index.html" class="mat-btn btn-direct-print" style="background:#f59e0b;">🚀 Oyunu Başlat</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Veliler İçin Pedagojik Rehber -->
+    <div class="parent-guide">
+      <h3>👨‍👩‍👧 Veliler İçin: 3. Sınıfta Ritmik Sayma Nasıl Kalıcı Hale Gelir?</h3>
+      <div class="guide-tips">
+        <div>
+          <p><strong>1. Ritmik Sayma = Çarpmanın Kalbidir:</strong> 3. sınıfta çocuklar ezber yerine adımlarla saymanın çarpma işlemi olduğunu fark ettiklerinde ("7 kere 6, 6'şar saymanın 7. adımıdır: 42") asla unutmazlar.</p>
+          <br>
+          <p><strong>2. Geriye Doğru Saydırma Taktiki:</strong> İleriye saymayı başardıktan sonra mutlaka geriye doğru sayma alıştırması yaptırın. Geriye sayabilen bir çocuk sayı örüntüsünü zihninde tam olarak haritalandırmıştır.</p>
+        </div>
+        <div>
+          <p><strong>3. Günlük Hayat Bağlantıları:</strong> 7'şer sayarken takvim günleri (1 hafta, 2 hafta...), 8'er sayarken örümcek bacakları veya araba tekerlekleri gibi somut nesneleri hayal ettirin.</p>
+          <br>
+          <p><strong>4. Oyun ve Flaş Kartlar:</strong> Günde sadece 5-10 dakika etkileşimli oyunu oynaması veya flaş kartlarla eşleştirme yapması, sayfalarca sıkıcı test çözmekten katbekat daha etkilidir.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

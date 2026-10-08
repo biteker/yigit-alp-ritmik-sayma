@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Sayma Başucu Posteri (6, 7, 8)</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    .poster-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .poster-column {
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid;
+    }
+    .col-6 {
+      border-color: #f97316;
+      background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+    }
+    .col-7 {
+      border-color: #0284c7;
+      background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+    }
+    .col-8 {
+      border-color: #9333ea;
+      background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+    }
+    .col-header {
+      text-align: center;
+      margin-bottom: 10px;
+      width: 100%;
+      padding-bottom: 6px;
+      border-bottom: 2px dashed rgba(0,0,0,0.1);
+    }
+    .col-header h3 {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .col-header p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      opacity: 0.8;
+    }
+    .number-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+    }
+    .step-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .step-order {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .step-val {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .col-6 .step-val { color: #ea580c; }
+    .col-7 .step-val { color: #0284c7; }
+    .col-8 .step-val { color: #9333ea; }
+    
+    .tip-box {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      line-height: 1.3;
+      text-align: center;
+      width: 100%;
+      font-weight: 600;
+    }
+    .col-6 .tip-box { background: #ffedd5; color: #9a3412; }
+    .col-7 .tip-box { background: #e0f2fe; color: #075985; }
+    .col-8 .tip-box { background: #f3e8ff; color: #6b21a8; }
+
+    .bottom-super-tips {
+      margin-top: 12px;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+    .super-tips-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 0.95rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .super-tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 0.76rem;
+      color: #334155;
+    }
+    .tip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🌟 Yiğit Alp: Ritmik Sayma Şampiyonluk Posteri</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Sheet Header -->
+      <div class="sheet-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🏆</span>
+            <div>
+              <h1 class="sheet-title">Yiğit Alp'in Ritmik Sayma Başucu Posteri</h1>
+              <p class="sheet-subtitle">3. Sınıf Matematik • 6'şar, 7'şer ve 8'er Hızlı Sayma ve Çarpım Rehberi</p>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.8rem; font-weight: 800; color: #475569; background: #e2e8f0; padding: 4px 10px; border-radius: 20px;">
+              ⭐ BAŞUCU POSTERİ
+            </span>
+          </div>
+        </div>
+        <div class="student-info-bar">
+          <div class="info-item"><span>Öğrenci:</span> <strong>Yiğit Alp</strong></div>
+          <div class="info-item"><span>Hedef:</span> <span>Hızlı ve Doğru Sayma</span></div>
+          <div class="info-item"><span>Seviye:</span> <span class="rating-stars">★★★★★</span></div>
+        </div>
+      </div>
+
+      <!-- Main Poster Content: 3 Columns -->
+      <div class="poster-grid">
+        
+        <!-- 6'ŞAR SÜTUNU -->
+        <div class="poster-column col-6">
+          <div class="col-header">
+            <div style="font-size: 1.8rem;">🚀</div>
+            <h3 style="color: #c2410c;">6'ŞAR SAYMA</h3>
+            <p style="color: #ea580c;">Altışar Altışar İlerle!</p>
+          </div>
+          <div class="number-steps">
+            <div class="step-item"><span class="step-order">1. adım (1×6)</span><span class="step-val">6</span></div>
+            <div class="step-item"><span class="step-order">2. adım (2×6)</span><span class="step-val">12</span></div>
+            <div class="step-item"><span class="step-order">3. adım (3×6)</span><span class="step-val">18</span></div>
+            <div class="step-item"><span class="step-order">4. adım (4×6)</span><span class="step-val">24</span></div>
+            <div class="step-item"><span class="step-order">5. adım (5×6)</span><span class="step-val">30</span></div>
+            <div class="step-item"><span class="step-order">6. adım (6×6)</span><span class="step-val">36</span></div>
+            <div class="step-item"><span class="step-order">7. adım (7×6)</span><span class="step-val">42</span></div>
+            <div class="step-item"><span class="step-order">8. adım (8×6)</span><span class="step-val">48</span></div>
+            <div class="step-item"><span class="step-order">9. adım (9×6)</span><span class="step-val">54</span></div>
+            <div class="step-item"><span class="step-order">10. adım (10×6)</span><span class="step-val">60</span></div>
+          </div>
+          <div class="tip-box">
+            💡 <strong>Sihirli İpucu:</strong> Birler basamağına dikkat et: <strong>6, 2, 8, 4, 0</strong> ritmiyle tekrarlanır! Tüm sayılar çifttir.
+          </div>
+        </div>
+
+        <!-- 7'ŞER SÜTUNU -->
+        <div class="poster-column col-7">
+          <div class="col-header">
+            <div style="font-size: 1.8rem;">🌊</div>
+            <h3 style="color: #0369a1;">7'ŞER SAYMA</h3>
+            <p style="color: #0284c7;">Yedişer Yedişer Dal!</p>
+          </div>
+          <div class="number-steps">
+            <div class="step-item"><span class="step-order">1. adım (1×7)</span><span class="step-val">7</span></div>
+            <div class="step-item"><span class="step-order">2. adım (2×7)</span><span class="step-val">14</span></div>
+            <div class="step-item"><span class="step-order">3. adım (3×7)</span><span class="step-val">21</span></div>
+            <div class="step-item"><span class="step-order">4. adım (4×7)</span><span class="step-val">28</span></div>
+            <div class="step-item"><span class="step-order">5. adım (5×7)</span><span class="step-val">35</span></div>
+            <div class="step-item"><span class="step-order">6. adım (6×7)</span><span class="step-val">42</span></div>
+            <div class="step-item"><span class="step-order">7. adım (7×7)</span><span class="step-val">49</span></div>
+            <div class="step-item"><span class="step-order">8. adım (8×7)</span><span class="step-val">56</span></div>
+            <div class="step-item"><span class="step-order">9. adım (9×7)</span><span class="step-val">63</span></div>
+            <div class="step-item"><span class="step-order">10. adım (10×7)</span><span class="step-val">70</span></div>
+          </div>
+          <div class="tip-box">
+            💡 <strong>Takvim Sırrı:</strong> 1 hafta = 7 gün! 2 hafta = 14 gün, 3 hafta = 21 gün, 4 hafta = 28 gün! Sayılar tek ve çift ardışık gelir.
+          </div>
+        </div>
+
+        <!-- 8'ER SÜTUNU -->
+        <div class="poster-column col-8">
+          <div class="col-header">
+            <div style="font-size: 1.8rem;">🦁</div>
+            <h3 style="color: #7e22ce;">8'ER SAYMA</h3>
+            <p style="color: #9333ea;">Sekizer Sekizer Kükre!</p>
+          </div>
+          <div class="number-steps">
+            <div class="step-item"><span class="step-order">1. adım (1×8)</span><span class="step-val">8</span></div>
+            <div class="step-item"><span class="step-order">2. adım (2×8)</span><span class="step-val">16</span></div>
+            <div class="step-item"><span class="step-order">3. adım (3×8)</span><span class="step-val">24</span></div>
+            <div class="step-item"><span class="step-order">4. adım (4×8)</span><span class="step-val">32</span></div>
+            <div class="step-item"><span class="step-order">5. adım (5×8)</span><span class="step-val">40</span></div>
+            <div class="step-item"><span class="step-order">6. adım (6×8)</span><span class="step-val">48</span></div>
+            <div class="step-item"><span class="step-order">7. adım (7×8)</span><span class="step-val">56</span></div>
+            <div class="step-item"><span class="step-order">8. adım (8×8)</span><span class="step-val">64</span></div>
+            <div class="step-item"><span class="step-order">9. adım (9×8)</span><span class="step-val">72</span></div>
+            <div class="step-item"><span class="step-order">10. adım (10×8)</span><span class="step-val">80</span></div>
+          </div>
+          <div class="tip-box">
+            💡 <strong>Çift Kat Sırrı:</strong> 4'ün 2 katıdır! Birler basamağı geriye doğru çift sayılardır: <strong>8, 6, 4, 2, 0</strong>!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Alt Kısım: Yiğit Alp İçin Altın Tüyolar -->
+      <div class="bottom-super-tips">
+        <div class="super-tips-title">
+          <span>🎯</span> Yiğit Alp'in Şampiyonluk Hafıza Taktikleri
+        </div>
+        <div class="super-tips-grid">
+          <div class="tip-item">
+            <span>✨</span>
+            <span><strong>Ortak Duraklar:</strong> 24 sayısı hem 6'nın (4. adım) hem de 8'in (3. adım) durağıdır! 48 ve 56 da özel arkadaş sayılardır (7×8 = 56, 6×8 = 48).</span>
+          </div>
+          <div class="tip-item">
+            <span>⚡</span>
+            <span><strong>Geriye Doğru Meydan Okuma:</strong> 60'tan, 70'ten ve 80'den geriye doğru saymayı başarırsan ritmik saymayı asıl o zaman fethetmiş olursun!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp • 3. Sınıf Matematik Atölyesi</span>
+        <span>Bu posteri çalışma masana veya odanın duvarına asabilirsin! 🌟</span>
+        <span>Başarılar Yiğit Alp! 🚀</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

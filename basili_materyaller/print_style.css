@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --primary-6: #ff6b35;
+  --secondary-6: #f7c59f;
+  --dark-6: #2b2d42;
+  --primary-7: #0077b6;
+  --secondary-7: #90e0ef;
+  --dark-7: #03045e;
+  --primary-8: #7209b7;
+  --secondary-8: #e0aaff;
+  --dark-8: #240046;
+  --primary-all: #10b981;
+  --bg-soft: #f8fafc;
+  --border-color: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Floating Action Toolbar (Screen Only) */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.toolbar h2 {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.15rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-print {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-print:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-home {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.btn-home:hover {
+  background: #e2e8f0;
+}
+
+.btn-answer {
+  background: #10b981;
+  color: white;
+}
+
+.btn-answer:hover {
+  background: #059669;
+}
+
+/* Page Container (Simulating A4) */
+.sheet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 24px;
+}
+
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: white;
+  padding: 14mm 15mm;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Header */
+.sheet-header {
+  border-bottom: 3px dashed #cbd5e1;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-title-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sheet-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.sheet-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sheet-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.student-info-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-line {
+  flex: 1;
+  border-bottom: 1.5px dotted #94a3b8;
+  height: 14px;
+}
+
+.rating-stars {
+  color: #fbbf24;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+/* Sections */
+.activity-card {
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: #ffffff;
+}
+
+.activity-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.activity-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Elements */
+.number-train {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.number-wagon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.wagon-filled {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 2px solid #38bdf8;
+}
+
+.wagon-empty {
+  background: #fff;
+  border: 2px dashed #94a3b8;
+  color: #94a3b8;
+}
+
+.wagon-arrow {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  font-weight: bold;
+}
+
+/* Grid & Tables */
+.matching-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.match-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-weight: 700;
+}
+
+.connector-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #64748b;
+  display: inline-block;
+}
+
+/* Footer */
+.sheet-footer {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1.5px dashed #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.answer-key-text {
+  display: none;
+  font-size: 0.8rem;
+  color: #059669;
+  font-weight: 800;
+  background: #ecfdf5;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+body.show-answers .answer-key-text {
+  display: inline-block;
+}
+
+body.show-answers .wagon-empty::after {
+  content: attr(data-answer);
+  color: #059669;
+  font-weight: 900;
+}
+
+/* Print Specific Rules */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6mm 8mm 6mm 8mm;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .toolbar {
+    display: none !important;
+  }
+  .sheet-container {
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+  .a4-page {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    page-break-after: always;
+    padding: 4mm 6mm !important;
+  }
+  .a4-page:last-child {
+    page-break-after: avoid;
+  }
+  .activity-card {
+    margin-bottom: 7px !important;
+    padding: 6px 10px !important;
+  }
+  .sheet-header {
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
+  }
+  .number-wagon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.1rem !important;
+  }
+}

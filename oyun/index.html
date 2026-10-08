@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Sayma Macera Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="game-nav">
+    <div class="brand-box">
+      <span class="brand-icon">🚀</span>
+      <div class="brand-text">
+        <h1>Yiğit Alp: Ritmik Macera</h1>
+        <p>3. Sınıf Matematik • 6'şar, 7'şer, 8'er Sayma Şampiyonası</p>
+      </div>
+    </div>
+    <div class="nav-stats">
+      <div class="stat-badge">
+        <span>⭐ Yıldızlar:</span>
+        <span id="total-stars-val" style="color:#fbbf24;">0</span>
+      </div>
+      <div class="stat-badge">
+        <span>🏆 Rekor:</span>
+        <span id="high-score-val" style="color:#38bdf8;">0</span>
+      </div>
+      <button id="sound-toggle-btn" class="icon-btn" title="Sesi Aç/Kapat">🔊</button>
+    </div>
+  </nav>
+
+  <!-- Main Game Container -->
+  <main class="main-wrapper">
+
+    <!-- Number Filter Bar (Always visible in game views, can also select in menu) -->
+    <div class="number-filter-bar">
+      <button class="filter-pill active" data-num="6">🚀 6'şar Sayma</button>
+      <button class="filter-pill" data-num="7">🌊 7'şer Sayma</button>
+      <button class="filter-pill" data-num="8">🦁 8'er Sayma</button>
+      <button class="filter-pill" data-num="all">⚡ Karışık (Tümü)</button>
+    </div>
+
+    <!-- VIEW 1: MAIN MENU -->
+    <section id="view-menu" class="game-view active">
+      <div class="welcome-card">
+        <h2>Hoş Geldin, Uzay Kaşifi Yiğit Alp! 🌟</h2>
+        <p>
+          Ritmik sayma güçlerini kullanarak uzay görevlerini tamamlamaya hazır mısın? 
+          Aşağıdaki eğlenceli oyun modlarından birini seç, puanları topla ve kendi Başarı Sertifikanı kazan!
+        </p>
+      </div>
+
+      <div class="modes-grid">
+        <!-- Mod 1 -->
+        <div class="mode-card" onclick="game.startRocketMode()">
+          <div class="mode-icon">🚀</div>
+          <div class="mode-info">
+            <h3>Roket Fırlatma</h3>
+            <p>10 basamağı sırayla bil, roketi yakıtla doldur ve uzaya fırlat!</p>
+          </div>
+        </div>
+
+        <!-- Mod 2 -->
+        <div class="mode-card" onclick="game.startDetectiveMode()">
+          <div class="mode-icon">🔍</div>
+          <div class="mode-info">
+            <h3>Kayıp Sayı Dedektifi</h3>
+            <p>Sayı dizisindeki kayıp soru işaretini yakala, dedektif yıldızını kap!</p>
+          </div>
+        </div>
+
+        <!-- Mod 3 -->
+        <div class="mode-card" onclick="game.startTimerMode()">
+          <div class="mode-icon">⏱️</div>
+          <div class="mode-info">
+            <h3>60 Saniye Şampiyonu</h3>
+            <p>1 dakikada yapabildiğin kadar seri yap! Kendi rekorunu kır!</p>
+          </div>
+        </div>
+
+        <!-- Mod 4 -->
+        <div class="mode-card" onclick="game.startTFMode()">
+          <div class="mode-icon">⚖️</div>
+          <div class="mode-info">
+            <h3>Doğru mu Yanlış mı?</h3>
+            <p>Hızlı refleks modu! Canlarını kaybetmeden doğru kararı ver!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-bottom-actions">
+        <button onclick="game.openCertificate()" class="btn-action btn-cert">
+          <span>📜</span> Başarı Sertifikamı Görüntüle
+        </button>
+        <a href="../basili_materyaller/tum_materyaller_rehberi.html" class="btn-action btn-sheets">
+          <span>📄</span> Çalışma Kağıtları & Materyaller
+        </a>
+      </div>
+    </section>
+
+    <!-- VIEW 2: ROKET FIRLATMA -->
+    <section id="view-rocket" class="game-view">
+      <div class="ingame-header">
+        <button onclick="game.goToMenu()" class="icon-btn" title="Menüye Dön">🏠</button>
+        <span class="ingame-title">🚀 Roket Fırlatma Rampası</span>
+        <span class="ingame-score">Görev: 10 Adım</span>
+      </div>
+
+      <div class="game-board">
+        <div class="rocket-visual-track">
+          <div id="rocket-progress-fill" class="rocket-progress-fill"></div>
+          <div id="rocket-sprite" class="rocket-sprite">🚀</div>
+          <div class="rocket-target-star">🌟</div>
+        </div>
+
+        <div id="rocket-prompt" class="question-prompt">
+          Sorunuz yükleniyor...
+        </div>
+
+        <div id="rocket-options-grid" class="options-grid"></div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: DEDEKTİF MODU -->
+    <section id="view-detective" class="game-view">
+      <div class="ingame-header">
+        <button onclick="game.goToMenu()" class="icon-btn" title="Menüye Dön">🏠</button>
+        <span class="ingame-title">🔍 Dedektif Görevi</span>
+        <span id="detective-round-text" class="ingame-score">Soru 1 / 10</span>
+      </div>
+
+      <div class="game-board">
+        <p style="color:#94a3b8; font-weight:700; margin-bottom:12px;">Soru işaretli boşluğa hangi sayı gelmeli?</p>
+        <div id="detective-sequence-container" class="sequence-display"></div>
+        <div id="detective-options-grid" class="options-grid"></div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: 60 SANİYE ZAMANLA YARIŞ -->
+    <section id="view-timer" class="game-view">
+      <div class="ingame-header">
+        <button onclick="game.goToMenu()" class="icon-btn" title="Menüye Dön">🏠</button>
+        <span class="ingame-title">⏱️ 60 Saniye Şampiyonası</span>
+        <span id="timer-score-text" class="ingame-score">Puan: 0</span>
+      </div>
+
+      <div class="game-board">
+        <div class="timer-container">
+          <div id="timer-seconds-circle" class="timer-circle">60</div>
+          <div id="timer-combo-badge" class="combo-badge">Seri Çarpanı: x1</div>
+        </div>
+
+        <div id="timer-prompt-text" class="question-prompt">
+          Hızlı soru hazırlanıyor...
+        </div>
+
+        <div id="timer-options-grid" class="options-grid"></div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: DOĞRU MU YANLIŞ MI? -->
+    <section id="view-tf" class="game-view">
+      <div class="ingame-header">
+        <button onclick="game.goToMenu()" class="icon-btn" title="Menüye Dön">🏠</button>
+        <span class="ingame-title">⚖️ Hızlı Refleks</span>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div id="tf-hearts-container" class="hearts-container">❤️❤️❤️</div>
+          <span style="font-weight:800; color:#fbbf24;">Puan: <span id="tf-score-val">0</span></span>
+        </div>
+      </div>
+
+      <div class="game-board">
+        <div class="tf-prompt-card">
+          <p id="tf-statement-text" class="tf-statement">İfade hazırlanıyor...</p>
+        </div>
+
+        <div class="tf-buttons-container">
+          <button onclick="game.handleTFAnswer(true)" class="btn-tf btn-true">
+            <span>✔️</span> DOĞRU
+          </button>
+          <button onclick="game.handleTFAnswer(false)" class="btn-tf btn-false">
+            <span>❌</span> YANLIŞ
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RESULT MODAL -->
+  <div id="result-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon">🏆</div>
+      <h2 id="modal-title-text" class="modal-title">Tebrikler!</h2>
+      <p id="modal-desc-text" class="modal-desc">Görevi başarıyla tamamladın.</p>
+      <div id="modal-score-display" class="modal-score-box">Kazanılan: ⭐⭐⭐</div>
+      <div class="modal-actions">
+        <button onclick="game.restartCurrentMode(); document.getElementById('result-modal').classList.remove('active');" class="btn-action btn-cert" style="justify-content:center;">
+          🔄 Tekrar Oyna
+        </button>
+        <button onclick="game.closeResultModal()" class="btn-action btn-sheets" style="justify-content:center;">
+          🏠 Ana Menüye Dön
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE MODAL -->
+  <div id="cert-modal" class="modal-overlay">
+    <div class="certificate-container">
+      <div style="position:absolute; top:12px; right:12px; display:flex; gap:8px;" class="no-print">
+        <button onclick="game.printCertificate()" class="btn-action btn-cert" style="padding:6px 14px; font-size:0.85rem;">🖨️ Yazdır / PDF</button>
+        <button onclick="game.closeCertificate()" class="btn-action btn-sheets" style="padding:6px 14px; font-size:0.85rem;">✕ Kapat</button>
+      </div>
+
+      <div class="cert-header">
+        <h2>Milli Eğitim Müfredatına Uygun • 3. Sınıf Başarı Belgesi</h2>
+        <h1 class="cert-title">RİTMİK SAYMA VE MATEMATİK DİPLOMASI</h1>
+      </div>
+
+      <div style="font-size:1.1rem; color:#64748b; margin-bottom:10px;">Bu belge üstün matematik gayreti dolayısıyla;</div>
+
+      <div class="cert-name">YİĞİT ALP</div>
+
+      <p class="cert-body">
+        <strong>6'şar, 7'şer ve 8'er ritmik sayma</strong> basamaklarını, eksik sayı bulmacalarını, 
+        zamanla yarış maratonunu ve zihinden çarpma adımlarını başarıyla tamamlayarak 
+        <strong>"Ritmik Sayma Kahramanı"</strong> unvanını almaya hak kazanmıştır.
+      </p>
+
+      <div id="cert-star-count" style="font-weight:800; color:#b45309; font-size:1.15rem; margin-bottom:12px;">
+        Kazanılan Yıldız: 0 ⭐
+      </div>
+
+      <div class="cert-footer">
+        <div>
+          <div id="cert-date">Tarih: 8 Ekim 2026</div>
+          <div style="margin-top:4px;">Atölye: Yiğit Alp Matematik Dünyası</div>
+        </div>
+        <div class="cert-seal">🏅</div>
+        <div>
+          <div>Başarı Derecesi: <strong>Pekiyi (★★★★★)</strong></div>
+          <div style="margin-top:6px; border-bottom:1.5px dotted #64748b; width:120px; display:inline-block;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="audio.js"></script>
+  <script src="confetti.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

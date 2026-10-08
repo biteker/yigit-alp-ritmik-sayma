@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Alp - Ritmik Sayma Çarkı & Kitap Ayraçları</title>
+  <link rel="stylesheet" href="print_style.css">
+  <style>
+    .craft-container {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    
+    /* Bookmark rulers */
+    .rulers-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .ruler-strip {
+      flex: 1;
+      border: 2px dashed #94a3b8;
+      border-radius: 12px;
+      padding: 10px 6px;
+      text-align: center;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .ruler-strip::before {
+      content: '✂ KES';
+      position: absolute;
+      top: -10px;
+      font-size: 0.65rem;
+      background: white;
+      padding: 0 4px;
+      color: #94a3b8;
+      font-weight: 800;
+    }
+    .ruler-header {
+      font-family: 'Fredoka', cursive;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid;
+      width: 100%;
+    }
+    .ruler-6 { border-color: #f97316; }
+    .ruler-6 .ruler-header { color: #ea580c; border-color: #fed7aa; }
+    .ruler-7 { border-color: #0284c7; }
+    .ruler-7 .ruler-header { color: #0284c7; border-color: #bae6fd; }
+    .ruler-8 { border-color: #9333ea; }
+    .ruler-8 .ruler-header { color: #9333ea; border-color: #e9d5ff; }
+
+    .ruler-numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+      width: 100%;
+    }
+    .ruler-node {
+      font-family: 'Fredoka', cursive;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 2px 0;
+      border-radius: 6px;
+      background: #f8fafc;
+    }
+    .ruler-6 .ruler-node { color: #c2410c; }
+    .ruler-7 .ruler-node { color: #0369a1; }
+    .ruler-8 .ruler-node { color: #7e22ce; }
+
+    /* SVG Wheel */
+    .wheel-section {
+      border: 2px dashed #94a3b8;
+      border-radius: 12px;
+      padding: 10px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .wheel-section::before {
+      content: '✂ DÖNER ÇARK';
+      position: absolute;
+      top: -10px;
+      font-size: 0.7rem;
+      background: white;
+      padding: 0 4px;
+      color: #94a3b8;
+      font-weight: 800;
+    }
+    .craft-instructions {
+      background: #fefce8;
+      border: 1.5px solid #fde047;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <h2>🎡 Ritmik Sayma Çarkı & Kalemlik Cetvelleri</h2>
+    <div class="toolbar-buttons">
+      <a href="tum_materyaller_rehberi.html" class="btn btn-home">📁 Tüm Kağıtlar</a>
+      <button onclick="window.print()" class="btn btn-print">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+  <div class="sheet-container">
+    <div class="a4-page">
+      <!-- Sheet Header -->
+      <div class="sheet-header">
+        <div class="header-top">
+          <div class="header-title-box">
+            <span class="sheet-icon">🎡</span>
+            <div>
+              <h1 class="sheet-title">Ritmik Sayma Çarkı & Kitap Ayraçları</h1>
+              <p class="sheet-subtitle">Yiğit Alp'in Kalem Kutusu & Kitap İçi Hızlı Destek Araçları</p>
+            </div>
+          </div>
+          <div>
+            <span style="background:#059669; color:white; padding:3px 10px; border-radius:12px; font-size:0.78rem; font-weight:800;">
+              KES & KULLAN
+            </span>
+          </div>
+        </div>
+        <div class="craft-instructions">
+          ✂️ <strong>El Becerisi & Kullanım Rehberi:</strong><br>
+          1. <strong>Kitap Ayraçları (Sağ Taraf):</strong> Dış çizgilerden kes, kitaplarının veya defterlerinin arasına koy. Ödev yaparken takıldığında anında bakabilirsin!<br>
+          2. <strong>Ritmik Çark (Sol Taraf):</strong> Çemberi kes. Ortasına bir ataş veya raptiye takarak çevirmeli oyun çarkı olarak kullanabilirsin!
+        </div>
+      </div>
+
+      <div class="craft-container">
+        
+        <!-- RİTMİK ÇARK (SVG GÖRSEL) -->
+        <div class="wheel-section">
+          <div style="font-family:'Fredoka', cursive; font-size:1.05rem; font-weight:700; color:#0f172a; margin-bottom:4px;">
+            🌟 Süper Ritmik Çark
+          </div>
+          <svg width="250" height="250" viewBox="0 0 250 250">
+            <!-- Dış Daire -->
+            <circle cx="125" cy="125" r="120" fill="#f8fafc" stroke="#334155" stroke-width="2.5" stroke-dasharray="4 2" />
+            
+            <!-- Dilimler (10 Dilim) -->
+            <!-- 6'şar, 7'şer ve 8'er eş merkezli halkalar -->
+            <!-- Dış Halka: 8'ler -->
+            <circle cx="125" cy="125" r="115" fill="none" stroke="#d8b4fe" stroke-width="26" />
+            <!-- Orta Halka: 7'ler -->
+            <circle cx="125" cy="125" r="88" fill="none" stroke="#bae6fd" stroke-width="26" />
+            <!-- İç Halka: 6'lar -->
+            <circle cx="125" cy="125" r="61" fill="none" stroke="#fed7aa" stroke-width="26" />
+            <!-- Merkez -->
+            <circle cx="125" cy="125" r="28" fill="#0f172a" />
+            <text x="125" y="121" text-anchor="middle" fill="#f8fafc" font-size="8" font-family="Nunito" font-weight="900">YİĞİT ALP</text>
+            <text x="125" y="132" text-anchor="middle" fill="#fbbf24" font-size="7" font-family="Nunito" font-weight="800">ÇARKI</text>
+            <circle cx="125" cy="125" r="3" fill="#ffffff" />
+
+            <!-- 6'lar Sayıları (İç Halka: r=61) -->
+            <text x="125" y="70" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">6</text>
+            <text x="157" y="80" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">12</text>
+            <text x="175" y="108" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">18</text>
+            <text x="175" y="145" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">24</text>
+            <text x="156" y="174" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">30</text>
+            <text x="125" y="185" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">36</text>
+            <text x="94" y="174" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">42</text>
+            <text x="75" y="145" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">48</text>
+            <text x="75" y="108" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">54</text>
+            <text x="94" y="80" text-anchor="middle" fill="#c2410c" font-size="9" font-weight="900">60</text>
+
+            <!-- 7'ler Sayıları (Orta Halka: r=88) -->
+            <text x="125" y="44" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">7</text>
+            <text x="170" y="58" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">14</text>
+            <text x="198" y="100" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">21</text>
+            <text x="200" y="152" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">28</text>
+            <text x="169" y="196" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">35</text>
+            <text x="125" y="210" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">42</text>
+            <text x="81" y="196" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">49</text>
+            <text x="50" y="152" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">56</text>
+            <text x="52" y="100" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">63</text>
+            <text x="81" y="58" text-anchor="middle" fill="#0369a1" font-size="9" font-weight="900">70</text>
+
+            <!-- 8'ler Sayıları (Dış Halka: r=115) -->
+            <text x="125" y="18" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">8</text>
+            <text x="183" y="37" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">16</text>
+            <text x="221" y="93" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">24</text>
+            <text x="222" y="160" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">32</text>
+            <text x="184" y="218" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">40</text>
+            <text x="125" y="235" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">48</text>
+            <text x="66" y="218" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">56</text>
+            <text x="28" y="160" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">64</text>
+            <text x="29" y="93" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">72</text>
+            <text x="67" y="37" text-anchor="middle" fill="#7e22ce" font-size="9" font-weight="900">80</text>
+          </svg>
+          <div style="font-size:0.72rem; color:#64748b; text-align:center; margin-top:6px;">
+            🟠 İç halka: 6'şar &nbsp;|&nbsp; 🔵 Orta: 7'şer &nbsp;|&nbsp; 🟣 Dış: 8'er
+          </div>
+        </div>
+
+        <!-- 3 ADET CEP CETVELİ / KİTAP AYRACI -->
+        <div class="rulers-container">
+          
+          <!-- 6'ŞAR CETVELİ -->
+          <div class="ruler-strip ruler-6">
+            <div class="ruler-header">🚀 6'ŞAR</div>
+            <div class="ruler-numbers">
+              <div class="ruler-node">6</div>
+              <div class="ruler-node">12</div>
+              <div class="ruler-node">18</div>
+              <div class="ruler-node">24</div>
+              <div class="ruler-node">30</div>
+              <div class="ruler-node">36</div>
+              <div class="ruler-node">42</div>
+              <div class="ruler-node">48</div>
+              <div class="ruler-node">54</div>
+              <div class="ruler-node">60</div>
+            </div>
+            <div style="font-size:0.65rem; color:#ea580c; font-weight:800; margin-top:6px;">YİĞİT ALP</div>
+          </div>
+
+          <!-- 7'ŞER CETVELİ -->
+          <div class="ruler-strip ruler-7">
+            <div class="ruler-header">🌊 7'ŞER</div>
+            <div class="ruler-numbers">
+              <div class="ruler-node">7</div>
+              <div class="ruler-node">14</div>
+              <div class="ruler-node">21</div>
+              <div class="ruler-node">28</div>
+              <div class="ruler-node">35</div>
+              <div class="ruler-node">42</div>
+              <div class="ruler-node">49</div>
+              <div class="ruler-node">56</div>
+              <div class="ruler-node">63</div>
+              <div class="ruler-node">70</div>
+            </div>
+            <div style="font-size:0.65rem; color:#0284c7; font-weight:800; margin-top:6px;">YİĞİT ALP</div>
+          </div>
+
+          <!-- 8'ER CETVELİ -->
+          <div class="ruler-strip ruler-8">
+            <div class="ruler-header">🦁 8'ER</div>
+            <div class="ruler-numbers">
+              <div class="ruler-node">8</div>
+              <div class="ruler-node">16</div>
+              <div class="ruler-node">24</div>
+              <div class="ruler-node">32</div>
+              <div class="ruler-node">40</div>
+              <div class="ruler-node">48</div>
+              <div class="ruler-node">56</div>
+              <div class="ruler-node">64</div>
+              <div class="ruler-node">72</div>
+              <div class="ruler-node">80</div>
+            </div>
+            <div style="font-size:0.65rem; color:#9333ea; font-weight:800; margin-top:6px;">YİĞİT ALP</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="sheet-footer">
+        <span>Yiğit Alp • 3. Sınıf Matematik Araçları</span>
+        <span>Bu cetvelleri kesip kitabının arasına koyabilirsin! 📖</span>
+        <span>Matematik Çok Kolay! ✨</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
