@@ -112,6 +112,53 @@
       color: #94a3b8;
       line-height: 1.4;
     }
+    .card-btn-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .btn-sub {
+      flex: 1;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .btn-html {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+    .btn-html:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+    .btn-pdf {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #f87171;
+      color: #fca5a5;
+    }
+    .btn-pdf:hover {
+      background: #ef4444;
+      color: white;
+    }
+    .btn-play {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      border: none;
+      width: 100%;
+    }
+    .btn-play:hover {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      transform: scale(1.02);
+    }
   </style>
 </head>
 <body>
@@ -141,69 +188,100 @@
     </div>
 
     <div class="section-cards">
-      <a href="pdf_ciktilari/01_ritmik_sayma_posteri.pdf" target="_blank" class="feat-card">
+      <!-- 01 -->
+      <div class="feat-card">
         <div>
           <h3>🏆 1. Ritmik Başucu Posteri</h3>
           <p>6, 7 ve 8'lerin bir arada olduğu, masaya asılabilen renkli A4 özet posteri ve tüyolar.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/01_ritmik_sayma_posteri.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/01_ritmik_sayma_posteri.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/02_6sar_calisma_kagidi.pdf" target="_blank" class="feat-card">
+      <!-- 02 -->
+      <div class="feat-card">
         <div>
           <h3>🚀 2. 6'şar Çalışma Kağıdı</h3>
           <p>Yıldız treni, Arı Maya petek labirenti, hatalı sayı dedektifi ve iniş paraşütü.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/02_6sar_calisma_kagidi.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/02_6sar_calisma_kagidi.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/03_7ser_calisma_kagidi.pdf" target="_blank" class="feat-card">
+      <!-- 03 -->
+      <div class="feat-card">
         <div>
           <h3>🌊 3. 7'şer Çalışma Kağıdı</h3>
           <p>Denizaltı incileri, takvim-hafta problemleri, batık hazine labirenti ve derinlik sayımı.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/03_7ser_calisma_kagidi.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/03_7ser_calisma_kagidi.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/04_8er_calisma_kagidi.pdf" target="_blank" class="feat-card">
+      <!-- 04 -->
+      <div class="feat-card">
         <div>
           <h3>🦁 4. 8'er Çalışma Kağıdı</h3>
           <p>Süper kahraman basamakları, örümcek & ahtapot zeka soruları, hakem modu ve hızlı çarpma.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/04_8er_calisma_kagidi.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/04_8er_calisma_kagidi.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/05_karisik_sampiyonluk.pdf" target="_blank" class="feat-card">
+      <!-- 05 -->
+      <div class="feat-card">
         <div>
           <h3>🥇 5. Karışık Şampiyonlar Ligi</h3>
           <p>3 vagonlu ritmik tren, kuralı bulma, ortak duraklar (24, 42, 56) ve şampiyonluk testi.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/05_karisik_sampiyonluk.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/05_karisik_sampiyonluk.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/06_kes_yapistir_kartlar.pdf" target="_blank" class="feat-card">
+      <!-- 06 -->
+      <div class="feat-card">
         <div>
           <h3>✂️ 6. Flaş & Hafıza Kartları</h3>
           <p>Makasla kesilip eşleştirme ve hafıza oyunu oynanabilen 2 sayfalık çiftli kart seti.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/06_kes_yapistir_kartlar.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/06_kes_yapistir_kartlar.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="pdf_ciktilari/07_ritmik_cark_ve_cetvel.pdf" target="_blank" class="feat-card">
+      <!-- 07 -->
+      <div class="feat-card">
         <div>
           <h3>🎡 7. Ritmik Çark & Cetveller</h3>
           <p>Döndürülebilir ritmik çark ve kitapların içine konabilen 3 adet renkli cep cetveli.</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#38bdf8; font-size:0.8rem;">PDF Aç ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="basili_materyaller/07_ritmik_cark_ve_cetvel.html" class="btn-sub btn-html">🌐 HTML Olarak Aç</a>
+          <a href="pdf_ciktilari/07_ritmik_cark_ve_cetvel.pdf" target="_blank" class="btn-sub btn-pdf">📄 PDF İndir</a>
+        </div>
+      </div>
 
-      <a href="oyun/index.html" class="feat-card" style="border-color:#f59e0b; background:rgba(245, 158, 11, 0.1);">
+      <!-- 08 -->
+      <div class="feat-card" style="border-color:#f59e0b; background:rgba(245, 158, 11, 0.12);">
         <div>
           <h3 style="color:#fbbf24;">🎮 8. Etkileşimli Macera Oyunu</h3>
           <p>Roket Fırlatma, Dedektif, 60 Saniye Şampiyonu ve Refleks modları + Diplomalı!</p>
         </div>
-        <div style="margin-top:10px; font-weight:800; color:#fbbf24; font-size:0.8rem;">Oyuna Git ➜</div>
-      </a>
+        <div class="card-btn-group">
+          <a href="oyun/index.html" class="btn-sub btn-play">🚀 Hemen Oyunu Oyna</a>
+        </div>
+      </div>
     </div>
 
     <!-- Mobil / Tablet Canlı Erişim & QR Kod Bölümü -->
